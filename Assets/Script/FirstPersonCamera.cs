@@ -5,10 +5,10 @@ using UnityEngine;
 public class FirstPersonCamera : MonoBehaviour
 {
     public Transform player;
-    public float mouseSensitivity = 2f; 
+    public float mouseSensitivity = 100f; 
     private float cameraVerticalRotation = 0f;
 
-    bool lockedCursor = true;
+    
 
     private void Start()
     {
@@ -19,8 +19,8 @@ public class FirstPersonCamera : MonoBehaviour
 
     private void Update()
     {
-        float inputX = Input.GetAxis("Mouse X") * mouseSensitivity;
-        float inputY = Input.GetAxis("Mouse Y") * mouseSensitivity;
+        float inputX = Input.GetAxis("Mouse X") * mouseSensitivity ;
+        float inputY = Input.GetAxis("Mouse Y") * mouseSensitivity ;
 
         cameraVerticalRotation -= inputY;
         cameraVerticalRotation = Mathf.Clamp(cameraVerticalRotation, -90f, 90f);
