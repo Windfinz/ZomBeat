@@ -7,6 +7,12 @@ public class EnemyBehavior : MonoBehaviour
     public Animation anim;
 
 
+    private void Awake()
+    {
+        
+
+    }
+
     private void Start()
     {
         anim = GetComponent<Animation>();
@@ -16,9 +22,10 @@ public class EnemyBehavior : MonoBehaviour
         anim.Play("Run");
     }
 
-    private void OnTriggerEnter(Collider other)
+
+    private void OnCollisionEnter(Collision collision)
     {
-        if (other.CompareTag("Player"))
+        if (collision.gameObject.CompareTag("Player"))
         {
             Attack();
         }
@@ -26,7 +33,7 @@ public class EnemyBehavior : MonoBehaviour
 
     private void Attack()
     {
-        anim.Play("Death");
+        anim.Play("Attack1");
         Debug.LogWarning("Danh");
     }
 

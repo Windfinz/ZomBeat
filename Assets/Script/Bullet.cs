@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
+using Unity.VisualScripting;
 
 public class Bullet : MonoBehaviour
 {
@@ -25,6 +26,7 @@ public class Bullet : MonoBehaviour
     public GameObject muzzleFlash;
     public TextMeshProUGUI amunitionDisplay;
     public TextMeshProUGUI reloadingDisplay;
+    
 
     private void Awake()
     {
@@ -44,6 +46,7 @@ public class Bullet : MonoBehaviour
             amunitionDisplay.SetText(bulletLeft / bulletPerTap + " / " + magSize /  bulletPerTap);
         }
     }
+
 
     private void MyInput()
     {
