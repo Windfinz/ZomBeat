@@ -23,7 +23,7 @@ public class Bullet : MonoBehaviour
 
     public bool allowInvoke = true;
 
-    public GameObject muzzleFlash;
+    public ParticleSystem muzzleFlash;
     public TextMeshProUGUI amunitionDisplay;
     public TextMeshProUGUI reloadingDisplay;
     
@@ -37,6 +37,9 @@ public class Bullet : MonoBehaviour
 
         reloadingDisplay.enabled = false;
     }
+
+    
+
     private void Update()
     {
         MyInput();
@@ -80,6 +83,7 @@ public class Bullet : MonoBehaviour
 
     private void Shoot()
     {
+        muzzleFlash.Play();
         readyToShoot = false;
 
         Ray ray = Camera.ViewportPointToRay(new Vector3(0.5f, 0.5f, 0));
@@ -109,7 +113,7 @@ public class Bullet : MonoBehaviour
         currentBullet.GetComponent<Rigidbody>().AddForce(directionWithSpread.normalized * shootForce, ForceMode.Impulse);
         currentBullet.GetComponent<Rigidbody>().AddForce(Camera.transform.up * upwardForce, ForceMode.Impulse);
 
-        //if(muzzleFlash != null)
+        //if (muzzleFlash != null)
         //{
         //    Instantiate(muzzleFlash, attackPoint.position, Quaternion.identity);
         //}
