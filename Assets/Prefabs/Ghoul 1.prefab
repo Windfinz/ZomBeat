@@ -1510,7 +1510,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4591024173528262312}
-  m_LocalRotation: {x: 0.032474477, y: 0.96153563, z: 0.23960748, w: -0.13031884}
+  m_LocalRotation: {x: -0.032474555, y: -0.9615361, z: -0.23960426, w: 0.13032097}
   m_LocalPosition: {x: -0.13789387, y: 0.09595461, z: -5.789233}
   m_LocalScale: {x: 0.7, y: 0.7, z: 0.7}
   m_ConstrainProportionsScale: 0
@@ -1522,7 +1522,7 @@ Transform:
   - {fileID: 4592937639809925580}
   m_Father: {fileID: 0}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: -27.985, y: -164.563, z: 0}
 --- !u!111 &4485169115699693310
 Animation:
   m_ObjectHideFlags: 0
@@ -1614,6 +1614,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   health: 100
+  manager: {fileID: 0}
 --- !u!195 &4589800041746519676
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -1847,7 +1848,7 @@ SkinnedMeshRenderer:
   m_RootBone: {fileID: 4585605636717698990}
   m_AABB:
     m_Center: {x: 0.32449257, y: 0.23113441, z: 0.1844635}
-    m_Extent: {x: 2.0365267, y: 2.334509, z: 1.9305992}
+    m_Extent: {x: 0, y: 0, z: 0}
   m_DirtyAABB: 0
 --- !u!1 &4591064533798808906
 GameObject:
