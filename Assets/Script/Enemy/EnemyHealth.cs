@@ -8,12 +8,14 @@ public class EnemyHealth : MonoBehaviour
     [SerializeField]
     GameManager manager ;
 
+    [SerializeField]
+    Enemy enemy;
+
     public void TakeDamage(float dmg)
     {
         health -= dmg;  
         if (health <= 0)
         {
-            Debug.LogWarning("bi danh");
             DestroyEnemy();
         }
 
@@ -21,8 +23,8 @@ public class EnemyHealth : MonoBehaviour
 
     public void DestroyEnemy()
     {
+        StartCoroutine(enemy.Death());
         manager.points++;
-        Destroy(gameObject);
     }
 
 

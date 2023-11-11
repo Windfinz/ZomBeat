@@ -12,6 +12,8 @@ public class Enemy : MonoBehaviour
 
     public Animator anim;
 
+    private bool isDeath = false;
+
     private void Start()
     {
         rb = GetComponent<Rigidbody>();
@@ -21,15 +23,19 @@ public class Enemy : MonoBehaviour
 
     private void Update()
     {
-        enemy.SetDestination(target.position);
-        transform.LookAt(target.position);
+        
+        if(!isDeath)
+        {
+            enemy.SetDestination(target.position);
+            transform.LookAt(target.position);
+
+        }
 
         if(enemy.remainingDistance <= enemy.stoppingDistance)
         {
             if(!enemy.hasPath || enemy.velocity.sqrMagnitude == 0f)
             {
-                Debug.LogWarning("Co");
-                anim.SetTrigger("attack1");
+                StartCoroutine(Attack());
             }
             else
             {
@@ -45,7 +51,25 @@ public class Enemy : MonoBehaviour
 
     }
 
-    
+    public IEnumerator Attack()
+    {
+        enemy.speed = 0f;
+        anim.SetTrigger("attack1");
+        yield return new WaitForSeconds(2f);
+        enemy.speed = 5f;
+
+    }
+
+    public IEnumerator Death()
+    {
+        isDeath = true;
+        enemy.speed = 0f;
+        anim.SetTrigger("death");
+        yield return new WaitForSeconds(5f);
+        Destroy(gameObject);
+
+
+    }
 
 
 }
