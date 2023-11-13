@@ -13,12 +13,20 @@ public class Enemy : MonoBehaviour
     public Animator anim;
 
     private bool isDeath = false;
+    private bool readyToAttack = true;
+
+    public float damage = 5f;
+
+    public float range;
+
+    [SerializeField]
+    private PlayerHealth player;
 
     private void Start()
     {
         rb = GetComponent<Rigidbody>();
         anim = GetComponent<Animator>();
-
+        
     }
 
     private void Update()
@@ -33,9 +41,15 @@ public class Enemy : MonoBehaviour
 
         if(enemy.remainingDistance <= enemy.stoppingDistance)
         {
-            if(!enemy.hasPath || enemy.velocity.sqrMagnitude == 0f)
+            if(!enemy.hasPath || enemy.velocity.sqrMagnitude == 0f )
             {
-                StartCoroutine(Attack());
+                if(readyToAttack)
+                {
+                    StartCoroutine(Attack());
+                    StartCoroutine(WaitTimeToAttack()); 
+
+                }
+
             }
             else
             {
@@ -51,12 +65,32 @@ public class Enemy : MonoBehaviour
 
     }
 
+    public IEnumerator WaitTimeToAttack()
+    {
+        readyToAttack = false;
+        yield return new WaitForSeconds(3f);
+        readyToAttack = true;
+    }
+
     public IEnumerator Attack()
     {
-        enemy.speed = 0f;
-        anim.SetTrigger("attack1");
-        yield return new WaitForSeconds(2f);
-        enemy.speed = 5f;
+        Ray ray = new Ray(transform.position, transform.forward);
+        RaycastHit hit;
+
+        if (Physics.Raycast(ray, out hit, range))
+        {
+            if (hit.collider.CompareTag("Player"))
+            {
+                enemy.speed = 0f;
+                anim.SetTrigger("attack1");
+                yield return new WaitForSeconds(1f);
+                player.TakeDamage(damage);
+                yield return new WaitForSeconds(0.5f);
+                enemy.speed = 5f;
+
+            }
+        }
+
 
     }
 
@@ -71,5 +105,6 @@ public class Enemy : MonoBehaviour
 
     }
 
+    
 
 }
