@@ -5,11 +5,17 @@ using UnityEngine;
 public class EnemyHealth : MonoBehaviour
 {
     public float health ;
-    [SerializeField]
-    GameManager manager ;
+    
+    public GameManager manager ;
 
-    [SerializeField]
-    Enemy enemy;
+    
+    public Enemy enemy;
+
+    private void Start()
+    {
+        enemy = GetComponent<Enemy>();
+        manager = FindObjectOfType<GameManager>();
+    }
 
     public void TakeDamage(float dmg)
     {

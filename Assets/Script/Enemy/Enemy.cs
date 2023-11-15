@@ -7,7 +7,7 @@ public class Enemy : MonoBehaviour
 {
     Rigidbody rb;
     
-    public Transform target;
+    public GameObject target;
     public NavMeshAgent enemy;
 
     public Animator anim;
@@ -24,9 +24,15 @@ public class Enemy : MonoBehaviour
 
     private void Start()
     {
+        AssignTarget();
         rb = GetComponent<Rigidbody>();
         anim = GetComponent<Animator>();
-        
+        player = FindObjectOfType<PlayerHealth>();
+    }
+
+    private void AssignTarget()
+    {
+        target = GameObject.Find("Player");
     }
 
     private void Update()
@@ -34,8 +40,8 @@ public class Enemy : MonoBehaviour
         
         if(!isDeath)
         {
-            enemy.SetDestination(target.position);
-            transform.LookAt(target.position);
+            enemy.SetDestination(target.transform.position);
+            transform.LookAt(target.transform.position);
 
         }
 
@@ -100,7 +106,7 @@ public class Enemy : MonoBehaviour
         enemy.speed = 0f;
         anim.SetTrigger("death");
         yield return new WaitForSeconds(5f);
-        Destroy(gameObject);
+        Destroy(this.gameObject);
 
 
     }
