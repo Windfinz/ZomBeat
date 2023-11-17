@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class BulletDamage : MonoBehaviour
 {
@@ -10,7 +11,10 @@ public class BulletDamage : MonoBehaviour
 
     public float damage = 50f;
 
+    public HitMarker hitIndicator;
+
     EnemyHealth enemy;
+
 
     private void Awake()
     {
@@ -21,34 +25,57 @@ public class BulletDamage : MonoBehaviour
 
     private void Start()
     {
+        hitIndicator = FindObjectOfType<HitMarker>();
         StartCoroutine(Trail());
-        trail.startWidth = 0.02f;
-        trail.endWidth = 0.01f;
-        trail.time = 0.2f;
-        trail.material = new Material(Shader.Find("Unlit/Color"));
-        trail.material.color = Color.yellow;
+        //trail.startWidth = 0.02f;
+        //trail.endWidth = 0.01f;
+        //trail.time = 0.2f;
+        //trail.material = new Material(Shader.Find("Unlit/Color"));
+        //trail.material.color = Color.yellow;
     }
 
 
     private void Update()
     {
-        trail.transform.position = transform.position;
+        //trail.transform.position = transform.position;
+
     }
 
-    private void OnTriggerEnter(Collider other)
+    public void OnTriggerEnter(Collider other)
     {
         
         if (other.CompareTag("Enemy"))
         {
+            hitIndicator.ShowHitMarker();
             other.GetComponent<EnemyHealth>().TakeDamage(damage);
             Destroy(gameObject);
         }
+
+        
+
     }
+
+    //private void EnableImage()
+    //{
+    //    if (enemyHit)
+    //    {
+    //        Debug.LogWarning("co");
+    //        hitEnemy.enabled = true;
+    //        StartCoroutine(DisableHitIndicator());
+    //    }
+    //}
 
     private IEnumerator Trail()
     {
         trail.emitting = true;
         yield return new WaitForSeconds(destroyAfterSeconds);
     }
+
+    //private IEnumerator DisableHitIndicator()
+    //{
+    //    enemyHit = false;
+    //    yield return new WaitForSeconds(1f);
+    //    hitEnemy.enabled = false;
+    //}
    
 }
