@@ -1,10 +1,12 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
+using TMPro;
 
 public class EnemySpawner : MonoBehaviour
 {
-    public CanvasGroup canvasGroup;
+    public GameObject Round;
 
     [System.Serializable]
     public class Wave
@@ -65,8 +67,8 @@ public class EnemySpawner : MonoBehaviour
 
     IEnumerator BeginNextWave()
     {
-        StartCoroutine(FadeIn(canvasGroup, 1f, 1f));
-        StartCoroutine(FadeOut(canvasGroup,0f,1f));
+        Debug.LogWarning("wave moi");
+        ShowWave(currentWaveCount);
         yield return new WaitForSeconds(1f);
         isWaveActive = true;
 
@@ -125,40 +127,53 @@ public class EnemySpawner : MonoBehaviour
         }
     }
 
-    private IEnumerator FadeIn(CanvasGroup canvasGroup, float to, float delay)
+    private void ShowWave(int round)
     {
-        yield return new WaitForSeconds(delay);
+        Round.SetActive(true);
 
-        float elapsed = 0f;
-        float duration = 0.3f;
-        float from = canvasGroup.alpha;
-
-        while (elapsed < duration)
-        {
-            canvasGroup.alpha = Mathf.Lerp(from, to, elapsed / duration);
-            elapsed += Time.deltaTime;
-            yield return null;
-
-        }
-        canvasGroup.alpha = to;
-
-    }private IEnumerator FadeOut(CanvasGroup canvasGroup, float to, float delay)
-    {
-        yield return new WaitForSeconds(delay);
-
-        float elapsed = 0f;
-        float duration = 0.3f;
-        float from = canvasGroup.alpha;
-
-        while (elapsed < duration)
-        {
-            canvasGroup.alpha = Mathf.Lerp(from, to, elapsed / duration);
-            elapsed += Time.deltaTime;
-            yield return null;
-
-        }
-        canvasGroup.alpha = to;
-
+        Round.GetComponentInChildren<TextMeshProUGUI>().text = "Wave " + round.ToString();
+        Invoke(nameof(HideWave), 2f);
     }
+
+    private void HideWave()
+    {
+        Round.SetActive(false); 
+    }
+
+    //private IEnumerator FadeIn(CanvasGroup canvasGroup, float to, float delay)
+    //{
+    //    yield return new WaitForSeconds(delay);
+
+    //    float elapsed = 0f;
+    //    float duration = 0.3f;
+    //    float from = canvasGroup.alpha;
+
+    //    while (elapsed < duration)
+    //    {
+    //        canvasGroup.alpha = Mathf.Lerp(from, to, elapsed / duration);
+    //        elapsed += Time.deltaTime;
+    //        yield return null;
+
+    //    }
+    //    canvasGroup.alpha = to;
+
+    //}private IEnumerator FadeOut(CanvasGroup canvasGroup, float to, float delay)
+    //{
+    //    yield return new WaitForSeconds(delay);
+
+    //    float elapsed = 0f;
+    //    float duration = 0.3f;
+    //    float from = canvasGroup.alpha;
+
+    //    while (elapsed < duration)
+    //    {
+    //        canvasGroup.alpha = Mathf.Lerp(from, to, elapsed / duration);
+    //        elapsed += Time.deltaTime;
+    //        yield return null;
+
+    //    }
+    //    canvasGroup.alpha = to;
+
+    //}
 
 }
