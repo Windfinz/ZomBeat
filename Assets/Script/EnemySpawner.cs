@@ -65,7 +65,7 @@ public class EnemySpawner : MonoBehaviour
 
     IEnumerator BeginNextWave()
     {
-        StartCoroutine(FadeIn(canvasGroup,0f,1f));
+        StartCoroutine(FadeIn(canvasGroup, 1f, 1f));
         StartCoroutine(FadeOut(canvasGroup,0f,1f));
         yield return new WaitForSeconds(1f);
         isWaveActive = true;
