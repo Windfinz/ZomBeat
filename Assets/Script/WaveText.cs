@@ -4,10 +4,7 @@ using UnityEngine;
 
 public class WaveText : MonoBehaviour
 {
-    public void ShowWave()
-    {
-
-    }
+    
 
 
 

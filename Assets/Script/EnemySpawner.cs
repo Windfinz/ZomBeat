@@ -67,10 +67,8 @@ public class EnemySpawner : MonoBehaviour
 
     IEnumerator BeginNextWave()
     {
-        Debug.LogWarning("wave moi");
-        ShowWave(currentWaveCount);
-        yield return new WaitForSeconds(1f);
         isWaveActive = true;
+        ShowWave(currentWaveCount);
 
         yield return new WaitForSeconds(waveInterval);
 
@@ -126,54 +124,18 @@ public class EnemySpawner : MonoBehaviour
             maxEnemiesReached = false;
         }
     }
-
     private void ShowWave(int round)
     {
         Round.SetActive(true);
 
         Round.GetComponentInChildren<TextMeshProUGUI>().text = "Wave " + round.ToString();
-        Invoke(nameof(HideWave), 2f);
+        //Invoke(nameof(HideWave), 2f);
+        StartCoroutine(HideWave());
     }
 
-    private void HideWave()
+    private IEnumerator HideWave()
     {
-        Round.SetActive(false); 
+        yield return new WaitForSeconds(1f);
+        Round.SetActive(false);
     }
-
-    //private IEnumerator FadeIn(CanvasGroup canvasGroup, float to, float delay)
-    //{
-    //    yield return new WaitForSeconds(delay);
-
-    //    float elapsed = 0f;
-    //    float duration = 0.3f;
-    //    float from = canvasGroup.alpha;
-
-    //    while (elapsed < duration)
-    //    {
-    //        canvasGroup.alpha = Mathf.Lerp(from, to, elapsed / duration);
-    //        elapsed += Time.deltaTime;
-    //        yield return null;
-
-    //    }
-    //    canvasGroup.alpha = to;
-
-    //}private IEnumerator FadeOut(CanvasGroup canvasGroup, float to, float delay)
-    //{
-    //    yield return new WaitForSeconds(delay);
-
-    //    float elapsed = 0f;
-    //    float duration = 0.3f;
-    //    float from = canvasGroup.alpha;
-
-    //    while (elapsed < duration)
-    //    {
-    //        canvasGroup.alpha = Mathf.Lerp(from, to, elapsed / duration);
-    //        elapsed += Time.deltaTime;
-    //        yield return null;
-
-    //    }
-    //    canvasGroup.alpha = to;
-
-    //}
-
 }
