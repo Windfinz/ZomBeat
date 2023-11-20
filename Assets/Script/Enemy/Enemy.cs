@@ -90,7 +90,7 @@ public class Enemy : MonoBehaviour
                 enemy.speed = 0f;
                 anim.SetTrigger("attack1");
                 yield return new WaitForSeconds(1f);
-                player.TakeDamage(damage);
+                CheckCanAttack();
                 yield return new WaitForSeconds(0.5f);
                 enemy.speed = 5f;
 
@@ -98,6 +98,15 @@ public class Enemy : MonoBehaviour
         }
 
 
+    }
+
+    private void CheckCanAttack()
+    {
+        if (enemy.remainingDistance <= enemy.stoppingDistance + 2f)
+        {
+            player.TakeDamage(damage);
+
+        }
     }
 
     public IEnumerator Death()
