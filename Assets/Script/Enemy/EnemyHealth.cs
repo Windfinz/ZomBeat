@@ -31,6 +31,7 @@ public class EnemyHealth : MonoBehaviour
     {
         StartCoroutine(enemy.Death());
         manager.points++;
+        
     }
 
 

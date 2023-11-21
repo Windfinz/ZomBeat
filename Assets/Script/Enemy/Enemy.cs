@@ -9,10 +9,11 @@ public class Enemy : MonoBehaviour
     
     public GameObject target;
     public NavMeshAgent enemy;
+    public BoxCollider boxCollider;
 
     public Animator anim;
 
-    private bool isDeath = false;
+    public bool isDeath = false;
     private bool readyToAttack = true;
 
     public float damage = 5f;
@@ -28,6 +29,7 @@ public class Enemy : MonoBehaviour
         rb = GetComponent<Rigidbody>();
         anim = GetComponent<Animator>();
         player = FindObjectOfType<PlayerHealth>();
+        boxCollider = GetComponent<BoxCollider>();
     }
 
     private void AssignTarget()
@@ -112,6 +114,7 @@ public class Enemy : MonoBehaviour
     public IEnumerator Death()
     {
         isDeath = true;
+        boxCollider.enabled = false;
         enemy.speed = 0f;
         anim.SetTrigger("death");
         yield return new WaitForSeconds(5f);
