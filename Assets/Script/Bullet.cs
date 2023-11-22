@@ -9,6 +9,8 @@ public class Bullet : MonoBehaviour
     Rigidbody rb;
     public GameObject bullet;
 
+    public AudioSource shootSound;
+
     public float shootForce, upwardForce;
 
     public float timeBetweenShooting, spread, reloadTime, timeBetweenShots;
@@ -26,6 +28,11 @@ public class Bullet : MonoBehaviour
     public ParticleSystem muzzleFlash;
     public TextMeshProUGUI amunitionDisplay;
     public TextMeshProUGUI reloadingDisplay;
+
+
+    [Header ("Recoil")]
+    public Vector3 upRecoil;
+    public Vector3 originRotation;
     
 
     private void Awake()
@@ -81,10 +88,30 @@ public class Bullet : MonoBehaviour
 
     }
 
+    private void Recoil()
+    {
+        transform.localEulerAngles += upRecoil;
+    }
+    private void StopRecoil()
+    {
+        transform.localEulerAngles = originRotation;
+    }
+
+    private IEnumerator RecoilTime()
+    {
+        Recoil();
+        yield return new WaitForSeconds(0.3f);
+        StopRecoil();
+    }
+
     private void Shoot()
     {
         muzzleFlash.Play();
+        shootSound.Play();  
         readyToShoot = false;
+
+        StopCoroutine(RecoilTime());
+        StartCoroutine(RecoilTime());
 
         Ray ray = Camera.ViewportPointToRay(new Vector3(0.5f, 0.5f, 0));
         RaycastHit hit;

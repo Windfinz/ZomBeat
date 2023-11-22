@@ -8,6 +8,7 @@ public class PlayerHealth : MonoBehaviour
 {
     public Image healthBar;
 
+    public float regen;
     public float health;
     public float maxHealth;
 
@@ -28,9 +29,23 @@ public class PlayerHealth : MonoBehaviour
 
     }
 
+    private void RegenHealth()
+    {
+        if (health < maxHealth)
+        {
+            health += regen * Time.deltaTime;
+            if(health > maxHealth)
+            {
+                health = maxHealth;
+            }
+
+        }
+    }
+
     private void Update()
     {
         HealthBar();
+        RegenHealth();
     }
 
     private void HealthBar()
