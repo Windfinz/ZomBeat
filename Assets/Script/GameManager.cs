@@ -7,8 +7,7 @@ using TMPro;
 public class GameManager : MonoBehaviour
 {
     [Header("StopWatch")]
-    public float timeLimit;
-    private float stopwatchTime;
+    public float stopwatchTime;
     public TMP_Text timeDisplay;
 
     [Header("Points")]
@@ -23,10 +22,13 @@ public class GameManager : MonoBehaviour
 
     void UpdateStopwatch()
     {
-        stopwatchTime += Time.deltaTime;
+        if(stopwatchTime > 0)
+        {
+            stopwatchTime -= Time.deltaTime;
+        }
         UpdateStopwatchDisplay();
 
-        if (stopwatchTime >= timeLimit)
+        if (stopwatchTime <= 0)
         {
             Time.timeScale = 0f ;
         }

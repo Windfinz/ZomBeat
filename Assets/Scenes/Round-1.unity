@@ -12880,7 +12880,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 95b41c299d0d28b418e2e53b3b8d8ec4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  timeLimit: 600
+  stopwatchTime: 90
   timeDisplay: {fileID: 490973263}
   pointDisplay: {fileID: 1923860596}
   points: 0
