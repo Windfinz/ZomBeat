@@ -1,8 +1,6 @@
 using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
 using TMPro;
-using Unity.VisualScripting;
+using UnityEngine;
 
 public class Bullet : MonoBehaviour
 {
@@ -30,10 +28,10 @@ public class Bullet : MonoBehaviour
     public TextMeshProUGUI reloadingDisplay;
 
 
-    [Header ("Recoil")]
+    [Header("Recoil")]
     public Vector3 upRecoil;
     public Vector3 originRotation;
-    
+
 
     private void Awake()
     {
@@ -45,15 +43,15 @@ public class Bullet : MonoBehaviour
         reloadingDisplay.enabled = false;
     }
 
-    
+
 
     private void Update()
     {
         MyInput();
 
-        if(amunitionDisplay != null)
+        if (amunitionDisplay != null)
         {
-            amunitionDisplay.SetText(bulletLeft / bulletPerTap + " / " + magSize /  bulletPerTap);
+            amunitionDisplay.SetText(bulletLeft / bulletPerTap + " / " + magSize / bulletPerTap);
         }
     }
 
@@ -69,17 +67,17 @@ public class Bullet : MonoBehaviour
             shooting = Input.GetKeyDown(KeyCode.Mouse0);
         }
 
-        if(Input.GetKeyDown(KeyCode.R) && bulletLeft < magSize && !reloading)
+        if (Input.GetKeyDown(KeyCode.R) && bulletLeft < magSize && !reloading)
         {
             Reload();
         }
 
-        if(readyToShoot && shooting && !reloading && bulletLeft <= 0)
+        if (readyToShoot && shooting && !reloading && bulletLeft <= 0)
         {
             Reload();
         }
 
-        if(readyToShoot && shooting && !reloading && bulletLeft > 0)
+        if (readyToShoot && shooting && !reloading && bulletLeft > 0)
         {
             bulletShot = 0;
 
@@ -107,7 +105,7 @@ public class Bullet : MonoBehaviour
     private void Shoot()
     {
         muzzleFlash.Play();
-        shootSound.Play();  
+        shootSound.Play();
         readyToShoot = false;
 
         StopCoroutine(RecoilTime());
@@ -117,23 +115,23 @@ public class Bullet : MonoBehaviour
         RaycastHit hit;
 
         Vector3 targetPoint;
-        if(Physics.Raycast(ray, out hit))
+        if (Physics.Raycast(ray, out hit))
         {
             targetPoint = hit.point;
         }
         else
         {
-            targetPoint = ray.GetPoint(75) ;
+            targetPoint = ray.GetPoint(75);
         }
 
         Vector3 directionWithoutSpread = targetPoint - attackPoint.position;
 
         float x = Random.Range(-spread, spread);
-        float y = Random.Range(-spread, spread); 
+        float y = Random.Range(-spread, spread);
 
         Vector3 directionWithSpread = directionWithoutSpread + new Vector3(x, y, 0);
 
-        GameObject currentBullet = Instantiate(bullet, attackPoint.position, Quaternion.identity) ;
+        GameObject currentBullet = Instantiate(bullet, attackPoint.position, Quaternion.identity);
 
         currentBullet.transform.forward = directionWithSpread.normalized;
 
@@ -154,7 +152,7 @@ public class Bullet : MonoBehaviour
             allowInvoke = false;
         }
 
-        if(bulletShot < bulletPerTap && bulletLeft > 0)
+        if (bulletShot < bulletPerTap && bulletLeft > 0)
         {
             Invoke("Shoot", timeBetweenShots);
         }

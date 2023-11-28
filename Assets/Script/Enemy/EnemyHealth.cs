@@ -1,14 +1,12 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class EnemyHealth : MonoBehaviour
 {
-    public float health ;
-    
-    public GameManager manager ;
+    public float health;
 
-    
+    public GameManager manager;
+
+
     public Enemy enemy;
 
     private void Start()
@@ -19,7 +17,7 @@ public class EnemyHealth : MonoBehaviour
 
     public void TakeDamage(float dmg)
     {
-        health -= dmg;  
+        health -= dmg;
         if (health <= 0)
         {
             DestroyEnemy();
@@ -30,8 +28,8 @@ public class EnemyHealth : MonoBehaviour
     public void DestroyEnemy()
     {
         StartCoroutine(enemy.Death());
-        manager.points++;
-        
+        manager.InscreaseScore();
+
     }
 
 

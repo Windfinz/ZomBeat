@@ -1,12 +1,11 @@
 using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
 
 public class Enemy : MonoBehaviour
 {
     Rigidbody rb;
-    
+
     public GameObject target;
     public NavMeshAgent enemy;
     public BoxCollider boxCollider;
@@ -39,22 +38,22 @@ public class Enemy : MonoBehaviour
 
     private void Update()
     {
-        
-        if(!isDeath)
+
+        if (!isDeath)
         {
             enemy.SetDestination(target.transform.position);
             transform.LookAt(target.transform.position);
 
         }
 
-        if(enemy.remainingDistance <= enemy.stoppingDistance)
+        if (enemy.remainingDistance <= enemy.stoppingDistance)
         {
-            if(!enemy.hasPath || enemy.velocity.sqrMagnitude == 0f )
+            if (!enemy.hasPath || enemy.velocity.sqrMagnitude == 0f)
             {
-                if(readyToAttack)
+                if (readyToAttack)
                 {
                     StartCoroutine(Attack());
-                    StartCoroutine(WaitTimeToAttack()); 
+                    StartCoroutine(WaitTimeToAttack());
 
                 }
 
@@ -63,7 +62,7 @@ public class Enemy : MonoBehaviour
             {
                 anim.SetBool("stop", false);
             }
-           
+
         }
         else
         {
@@ -123,6 +122,6 @@ public class Enemy : MonoBehaviour
 
     }
 
-    
+
 
 }
