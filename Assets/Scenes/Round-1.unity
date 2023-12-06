@@ -4232,7 +4232,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'High Score:'
+  m_text: 'Score:'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -10369,7 +10369,7 @@ AudioSource:
   m_PlayOnAwake: 1
   m_Volume: 0.7
   m_Pitch: 1
-  Loop: 0
+  Loop: 1
   Mute: 0
   Spatialize: 0
   SpatializePostEffects: 0
@@ -15024,7 +15024,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 95b41c299d0d28b418e2e53b3b8d8ec4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  stopwatchTime: 20
+  stopwatchTime: 600
   timeDisplay: {fileID: 490973263}
   scoreText: {fileID: 496420532}
   hiScoreText: {fileID: 1923860596}
@@ -15035,6 +15035,7 @@ MonoBehaviour:
   Lose: {fileID: 1627047499}
   camera: {fileID: 963194229}
   pauseGame: {fileID: 2026566483}
+  time: {fileID: 1110776082}
 --- !u!4 &1659008936
 Transform:
   m_ObjectHideFlags: 0
@@ -23577,7 +23578,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'High Score:'
+  m_text: 'Score:'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}

@@ -22,6 +22,7 @@ public class GameManager : MonoBehaviour
 
     public FirstPersonCamera camera;
     public GameObject pauseGame;
+    public GameObject time;
 
     private bool isPause = false;
     private bool isStop = false;
@@ -35,8 +36,7 @@ public class GameManager : MonoBehaviour
         camera = FindObjectOfType<FirstPersonCamera>();
         SetScore(0);
         hiScoreText.text = LoadHiscore().ToString();
-        winHiScoreText.text = LoadHiscore().ToString();
-        loseHiScoreText.text = LoadHiscore().ToString();
+        time.SetActive(true);
 
 
     }
@@ -44,6 +44,8 @@ public class GameManager : MonoBehaviour
     private void Update()
     {
         UpdateStopwatch();
+        UpdateStopwatchDisplay();
+
         Pause();
         if (!isStop)
         {
@@ -57,6 +59,8 @@ public class GameManager : MonoBehaviour
             }
 
         }
+        winHiScoreText.text = score.ToString();
+        loseHiScoreText.text = score.ToString();
     }
 
     void UpdateStopwatch()
@@ -65,7 +69,6 @@ public class GameManager : MonoBehaviour
         {
             stopwatchTime -= Time.deltaTime;
         }
-        UpdateStopwatchDisplay();
 
         if (stopwatchTime <= 0)
         {
@@ -84,6 +87,7 @@ public class GameManager : MonoBehaviour
     public void WinGame()
     {
         isStop = true;
+        time.SetActive(false);
         camera.UnlockCursor();
         Win.SetActive(true);
         Time.timeScale = 0f;
@@ -91,6 +95,7 @@ public class GameManager : MonoBehaviour
     public void LoseGame()
     {
         isStop = true;
+        time.SetActive(false);
         camera.UnlockCursor();
         Lose.SetActive(true);
         Time.timeScale = 0f;
