@@ -70,6 +70,7 @@ public class GameManager : MonoBehaviour
         if (stopwatchTime <= 0)
         {
             Time.timeScale = 0f;
+            WinGame();
         }
     }
     void UpdateStopwatchDisplay()
