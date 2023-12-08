@@ -24589,7 +24589,7 @@ MonoBehaviour:
   - waveName: 1
     enemyGroups:
     - enemyName: 
-      enemyCount: 3
+      enemyCount: 8
       spawnCount: 0
       enemyPrefab: {fileID: 386204030839836281, guid: fdf80e34141b8904990334407d5d905e, type: 3}
     waveQuota: 0
@@ -24598,7 +24598,7 @@ MonoBehaviour:
   - waveName: 2
     enemyGroups:
     - enemyName: 
-      enemyCount: 5
+      enemyCount: 8
       spawnCount: 0
       enemyPrefab: {fileID: 386204030839836281, guid: fdf80e34141b8904990334407d5d905e, type: 3}
     waveQuota: 0
@@ -24607,7 +24607,7 @@ MonoBehaviour:
   - waveName: 3
     enemyGroups:
     - enemyName: 
-      enemyCount: 6
+      enemyCount: 8
       spawnCount: 0
       enemyPrefab: {fileID: 386204030839836281, guid: fdf80e34141b8904990334407d5d905e, type: 3}
     waveQuota: 0
@@ -24616,7 +24616,7 @@ MonoBehaviour:
   - waveName: 4
     enemyGroups:
     - enemyName: 
-      enemyCount: 7
+      enemyCount: 8
       spawnCount: 0
       enemyPrefab: {fileID: 386204030839836281, guid: fdf80e34141b8904990334407d5d905e, type: 3}
     waveQuota: 0
@@ -24625,7 +24625,7 @@ MonoBehaviour:
   - waveName: 5
     enemyGroups:
     - enemyName: 
-      enemyCount: 7
+      enemyCount: 8
       spawnCount: 0
       enemyPrefab: {fileID: 386204030839836281, guid: fdf80e34141b8904990334407d5d905e, type: 3}
     waveQuota: 0
@@ -24634,7 +24634,7 @@ MonoBehaviour:
   - waveName: 6
     enemyGroups:
     - enemyName: 
-      enemyCount: 7
+      enemyCount: 8
       spawnCount: 0
       enemyPrefab: {fileID: 386204030839836281, guid: fdf80e34141b8904990334407d5d905e, type: 3}
     waveQuota: 0
@@ -24661,7 +24661,7 @@ MonoBehaviour:
   - waveName: 9
     enemyGroups:
     - enemyName: 
-      enemyCount: 7
+      enemyCount: 8
       spawnCount: 0
       enemyPrefab: {fileID: 386204030839836281, guid: fdf80e34141b8904990334407d5d905e, type: 3}
     waveQuota: 0
@@ -24670,7 +24670,7 @@ MonoBehaviour:
   - waveName: 10
     enemyGroups:
     - enemyName: 
-      enemyCount: 7
+      enemyCount: 8
       spawnCount: 0
       enemyPrefab: {fileID: 386204030839836281, guid: fdf80e34141b8904990334407d5d905e, type: 3}
     waveQuota: 0
@@ -24679,7 +24679,7 @@ MonoBehaviour:
   - waveName: 11
     enemyGroups:
     - enemyName: 
-      enemyCount: 7
+      enemyCount: 8
       spawnCount: 0
       enemyPrefab: {fileID: 386204030839836281, guid: fdf80e34141b8904990334407d5d905e, type: 3}
     waveQuota: 0
@@ -24688,7 +24688,7 @@ MonoBehaviour:
   - waveName: 12
     enemyGroups:
     - enemyName: 
-      enemyCount: 7
+      enemyCount: 8
       spawnCount: 0
       enemyPrefab: {fileID: 386204030839836281, guid: fdf80e34141b8904990334407d5d905e, type: 3}
     waveQuota: 0
@@ -25038,9 +25038,9 @@ MonoBehaviour:
     spawnCount: 0
   currentWaveCount: 0
   enemiesAlive: 0
-  maxEnemiesAllowed: 20
+  maxEnemiesAllowed: 30
   maxEnemiesReached: 0
-  waveInterval: 15
+  waveInterval: 10
   relativeSpawnPoints:
   - {fileID: 463046585}
   - {fileID: 1658973298}
