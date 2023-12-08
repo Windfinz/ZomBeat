@@ -15024,7 +15024,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 95b41c299d0d28b418e2e53b3b8d8ec4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  stopwatchTime: 600
+  stopwatchTime: 180
   timeDisplay: {fileID: 490973263}
   scoreText: {fileID: 496420532}
   hiScoreText: {fileID: 1923860596}
@@ -24622,11 +24622,398 @@ MonoBehaviour:
     waveQuota: 0
     spawnInterval: 1
     spawnCount: 0
+  - waveName: 4
+    enemyGroups:
+    - enemyName: 
+      enemyCount: 7
+      spawnCount: 0
+      enemyPrefab: {fileID: 386204030839836281, guid: fdf80e34141b8904990334407d5d905e, type: 3}
+    waveQuota: 0
+    spawnInterval: 1
+    spawnCount: 0
+  - waveName: 4
+    enemyGroups:
+    - enemyName: 
+      enemyCount: 7
+      spawnCount: 0
+      enemyPrefab: {fileID: 386204030839836281, guid: fdf80e34141b8904990334407d5d905e, type: 3}
+    waveQuota: 0
+    spawnInterval: 1
+    spawnCount: 0
+  - waveName: 4
+    enemyGroups:
+    - enemyName: 
+      enemyCount: 7
+      spawnCount: 0
+      enemyPrefab: {fileID: 386204030839836281, guid: fdf80e34141b8904990334407d5d905e, type: 3}
+    waveQuota: 0
+    spawnInterval: 1
+    spawnCount: 0
+  - waveName: 4
+    enemyGroups:
+    - enemyName: 
+      enemyCount: 7
+      spawnCount: 0
+      enemyPrefab: {fileID: 386204030839836281, guid: fdf80e34141b8904990334407d5d905e, type: 3}
+    waveQuota: 0
+    spawnInterval: 1
+    spawnCount: 0
+  - waveName: 4
+    enemyGroups:
+    - enemyName: 
+      enemyCount: 7
+      spawnCount: 0
+      enemyPrefab: {fileID: 386204030839836281, guid: fdf80e34141b8904990334407d5d905e, type: 3}
+    waveQuota: 0
+    spawnInterval: 1
+    spawnCount: 0
+  - waveName: 4
+    enemyGroups:
+    - enemyName: 
+      enemyCount: 7
+      spawnCount: 0
+      enemyPrefab: {fileID: 386204030839836281, guid: fdf80e34141b8904990334407d5d905e, type: 3}
+    waveQuota: 0
+    spawnInterval: 1
+    spawnCount: 0
+  - waveName: 4
+    enemyGroups:
+    - enemyName: 
+      enemyCount: 7
+      spawnCount: 0
+      enemyPrefab: {fileID: 386204030839836281, guid: fdf80e34141b8904990334407d5d905e, type: 3}
+    waveQuota: 0
+    spawnInterval: 1
+    spawnCount: 0
+  - waveName: 4
+    enemyGroups:
+    - enemyName: 
+      enemyCount: 7
+      spawnCount: 0
+      enemyPrefab: {fileID: 386204030839836281, guid: fdf80e34141b8904990334407d5d905e, type: 3}
+    waveQuota: 0
+    spawnInterval: 1
+    spawnCount: 0
+  - waveName: 4
+    enemyGroups:
+    - enemyName: 
+      enemyCount: 7
+      spawnCount: 0
+      enemyPrefab: {fileID: 386204030839836281, guid: fdf80e34141b8904990334407d5d905e, type: 3}
+    waveQuota: 0
+    spawnInterval: 1
+    spawnCount: 0
+  - waveName: 4
+    enemyGroups:
+    - enemyName: 
+      enemyCount: 7
+      spawnCount: 0
+      enemyPrefab: {fileID: 386204030839836281, guid: fdf80e34141b8904990334407d5d905e, type: 3}
+    waveQuota: 0
+    spawnInterval: 1
+    spawnCount: 0
+  - waveName: 4
+    enemyGroups:
+    - enemyName: 
+      enemyCount: 7
+      spawnCount: 0
+      enemyPrefab: {fileID: 386204030839836281, guid: fdf80e34141b8904990334407d5d905e, type: 3}
+    waveQuota: 0
+    spawnInterval: 1
+    spawnCount: 0
+  - waveName: 4
+    enemyGroups:
+    - enemyName: 
+      enemyCount: 7
+      spawnCount: 0
+      enemyPrefab: {fileID: 386204030839836281, guid: fdf80e34141b8904990334407d5d905e, type: 3}
+    waveQuota: 0
+    spawnInterval: 1
+    spawnCount: 0
+  - waveName: 4
+    enemyGroups:
+    - enemyName: 
+      enemyCount: 7
+      spawnCount: 0
+      enemyPrefab: {fileID: 386204030839836281, guid: fdf80e34141b8904990334407d5d905e, type: 3}
+    waveQuota: 0
+    spawnInterval: 1
+    spawnCount: 0
+  - waveName: 4
+    enemyGroups:
+    - enemyName: 
+      enemyCount: 7
+      spawnCount: 0
+      enemyPrefab: {fileID: 386204030839836281, guid: fdf80e34141b8904990334407d5d905e, type: 3}
+    waveQuota: 0
+    spawnInterval: 1
+    spawnCount: 0
+  - waveName: 4
+    enemyGroups:
+    - enemyName: 
+      enemyCount: 7
+      spawnCount: 0
+      enemyPrefab: {fileID: 386204030839836281, guid: fdf80e34141b8904990334407d5d905e, type: 3}
+    waveQuota: 0
+    spawnInterval: 1
+    spawnCount: 0
+  - waveName: 4
+    enemyGroups:
+    - enemyName: 
+      enemyCount: 7
+      spawnCount: 0
+      enemyPrefab: {fileID: 386204030839836281, guid: fdf80e34141b8904990334407d5d905e, type: 3}
+    waveQuota: 0
+    spawnInterval: 1
+    spawnCount: 0
+  - waveName: 4
+    enemyGroups:
+    - enemyName: 
+      enemyCount: 7
+      spawnCount: 0
+      enemyPrefab: {fileID: 386204030839836281, guid: fdf80e34141b8904990334407d5d905e, type: 3}
+    waveQuota: 0
+    spawnInterval: 1
+    spawnCount: 0
+  - waveName: 4
+    enemyGroups:
+    - enemyName: 
+      enemyCount: 7
+      spawnCount: 0
+      enemyPrefab: {fileID: 386204030839836281, guid: fdf80e34141b8904990334407d5d905e, type: 3}
+    waveQuota: 0
+    spawnInterval: 1
+    spawnCount: 0
+  - waveName: 4
+    enemyGroups:
+    - enemyName: 
+      enemyCount: 7
+      spawnCount: 0
+      enemyPrefab: {fileID: 386204030839836281, guid: fdf80e34141b8904990334407d5d905e, type: 3}
+    waveQuota: 0
+    spawnInterval: 1
+    spawnCount: 0
+  - waveName: 4
+    enemyGroups:
+    - enemyName: 
+      enemyCount: 7
+      spawnCount: 0
+      enemyPrefab: {fileID: 386204030839836281, guid: fdf80e34141b8904990334407d5d905e, type: 3}
+    waveQuota: 0
+    spawnInterval: 1
+    spawnCount: 0
+  - waveName: 4
+    enemyGroups:
+    - enemyName: 
+      enemyCount: 7
+      spawnCount: 0
+      enemyPrefab: {fileID: 386204030839836281, guid: fdf80e34141b8904990334407d5d905e, type: 3}
+    waveQuota: 0
+    spawnInterval: 1
+    spawnCount: 0
+  - waveName: 4
+    enemyGroups:
+    - enemyName: 
+      enemyCount: 7
+      spawnCount: 0
+      enemyPrefab: {fileID: 386204030839836281, guid: fdf80e34141b8904990334407d5d905e, type: 3}
+    waveQuota: 0
+    spawnInterval: 1
+    spawnCount: 0
+  - waveName: 4
+    enemyGroups:
+    - enemyName: 
+      enemyCount: 7
+      spawnCount: 0
+      enemyPrefab: {fileID: 386204030839836281, guid: fdf80e34141b8904990334407d5d905e, type: 3}
+    waveQuota: 0
+    spawnInterval: 1
+    spawnCount: 0
+  - waveName: 4
+    enemyGroups:
+    - enemyName: 
+      enemyCount: 7
+      spawnCount: 0
+      enemyPrefab: {fileID: 386204030839836281, guid: fdf80e34141b8904990334407d5d905e, type: 3}
+    waveQuota: 0
+    spawnInterval: 1
+    spawnCount: 0
+  - waveName: 4
+    enemyGroups:
+    - enemyName: 
+      enemyCount: 7
+      spawnCount: 0
+      enemyPrefab: {fileID: 386204030839836281, guid: fdf80e34141b8904990334407d5d905e, type: 3}
+    waveQuota: 0
+    spawnInterval: 1
+    spawnCount: 0
+  - waveName: 4
+    enemyGroups:
+    - enemyName: 
+      enemyCount: 7
+      spawnCount: 0
+      enemyPrefab: {fileID: 386204030839836281, guid: fdf80e34141b8904990334407d5d905e, type: 3}
+    waveQuota: 0
+    spawnInterval: 1
+    spawnCount: 0
+  - waveName: 4
+    enemyGroups:
+    - enemyName: 
+      enemyCount: 7
+      spawnCount: 0
+      enemyPrefab: {fileID: 386204030839836281, guid: fdf80e34141b8904990334407d5d905e, type: 3}
+    waveQuota: 0
+    spawnInterval: 1
+    spawnCount: 0
+  - waveName: 4
+    enemyGroups:
+    - enemyName: 
+      enemyCount: 7
+      spawnCount: 0
+      enemyPrefab: {fileID: 386204030839836281, guid: fdf80e34141b8904990334407d5d905e, type: 3}
+    waveQuota: 0
+    spawnInterval: 1
+    spawnCount: 0
+  - waveName: 4
+    enemyGroups:
+    - enemyName: 
+      enemyCount: 7
+      spawnCount: 0
+      enemyPrefab: {fileID: 386204030839836281, guid: fdf80e34141b8904990334407d5d905e, type: 3}
+    waveQuota: 0
+    spawnInterval: 1
+    spawnCount: 0
+  - waveName: 4
+    enemyGroups:
+    - enemyName: 
+      enemyCount: 7
+      spawnCount: 0
+      enemyPrefab: {fileID: 386204030839836281, guid: fdf80e34141b8904990334407d5d905e, type: 3}
+    waveQuota: 0
+    spawnInterval: 1
+    spawnCount: 0
+  - waveName: 4
+    enemyGroups:
+    - enemyName: 
+      enemyCount: 7
+      spawnCount: 0
+      enemyPrefab: {fileID: 386204030839836281, guid: fdf80e34141b8904990334407d5d905e, type: 3}
+    waveQuota: 0
+    spawnInterval: 1
+    spawnCount: 0
+  - waveName: 4
+    enemyGroups:
+    - enemyName: 
+      enemyCount: 7
+      spawnCount: 0
+      enemyPrefab: {fileID: 386204030839836281, guid: fdf80e34141b8904990334407d5d905e, type: 3}
+    waveQuota: 0
+    spawnInterval: 1
+    spawnCount: 0
+  - waveName: 4
+    enemyGroups:
+    - enemyName: 
+      enemyCount: 7
+      spawnCount: 0
+      enemyPrefab: {fileID: 386204030839836281, guid: fdf80e34141b8904990334407d5d905e, type: 3}
+    waveQuota: 0
+    spawnInterval: 1
+    spawnCount: 0
+  - waveName: 4
+    enemyGroups:
+    - enemyName: 
+      enemyCount: 7
+      spawnCount: 0
+      enemyPrefab: {fileID: 386204030839836281, guid: fdf80e34141b8904990334407d5d905e, type: 3}
+    waveQuota: 0
+    spawnInterval: 1
+    spawnCount: 0
+  - waveName: 4
+    enemyGroups:
+    - enemyName: 
+      enemyCount: 7
+      spawnCount: 0
+      enemyPrefab: {fileID: 386204030839836281, guid: fdf80e34141b8904990334407d5d905e, type: 3}
+    waveQuota: 0
+    spawnInterval: 1
+    spawnCount: 0
+  - waveName: 4
+    enemyGroups:
+    - enemyName: 
+      enemyCount: 7
+      spawnCount: 0
+      enemyPrefab: {fileID: 386204030839836281, guid: fdf80e34141b8904990334407d5d905e, type: 3}
+    waveQuota: 0
+    spawnInterval: 1
+    spawnCount: 0
+  - waveName: 4
+    enemyGroups:
+    - enemyName: 
+      enemyCount: 7
+      spawnCount: 0
+      enemyPrefab: {fileID: 386204030839836281, guid: fdf80e34141b8904990334407d5d905e, type: 3}
+    waveQuota: 0
+    spawnInterval: 1
+    spawnCount: 0
+  - waveName: 4
+    enemyGroups:
+    - enemyName: 
+      enemyCount: 7
+      spawnCount: 0
+      enemyPrefab: {fileID: 386204030839836281, guid: fdf80e34141b8904990334407d5d905e, type: 3}
+    waveQuota: 0
+    spawnInterval: 1
+    spawnCount: 0
+  - waveName: 4
+    enemyGroups:
+    - enemyName: 
+      enemyCount: 7
+      spawnCount: 0
+      enemyPrefab: {fileID: 386204030839836281, guid: fdf80e34141b8904990334407d5d905e, type: 3}
+    waveQuota: 0
+    spawnInterval: 1
+    spawnCount: 0
+  - waveName: 4
+    enemyGroups:
+    - enemyName: 
+      enemyCount: 7
+      spawnCount: 0
+      enemyPrefab: {fileID: 386204030839836281, guid: fdf80e34141b8904990334407d5d905e, type: 3}
+    waveQuota: 0
+    spawnInterval: 1
+    spawnCount: 0
+  - waveName: 4
+    enemyGroups:
+    - enemyName: 
+      enemyCount: 7
+      spawnCount: 0
+      enemyPrefab: {fileID: 386204030839836281, guid: fdf80e34141b8904990334407d5d905e, type: 3}
+    waveQuota: 0
+    spawnInterval: 1
+    spawnCount: 0
+  - waveName: 4
+    enemyGroups:
+    - enemyName: 
+      enemyCount: 7
+      spawnCount: 0
+      enemyPrefab: {fileID: 386204030839836281, guid: fdf80e34141b8904990334407d5d905e, type: 3}
+    waveQuota: 0
+    spawnInterval: 1
+    spawnCount: 0
+  - waveName: 4
+    enemyGroups:
+    - enemyName: 
+      enemyCount: 7
+      spawnCount: 0
+      enemyPrefab: {fileID: 386204030839836281, guid: fdf80e34141b8904990334407d5d905e, type: 3}
+    waveQuota: 0
+    spawnInterval: 1
+    spawnCount: 0
   currentWaveCount: 0
   enemiesAlive: 0
   maxEnemiesAllowed: 20
   maxEnemiesReached: 0
-  waveInterval: 10
+  waveInterval: 15
   relativeSpawnPoints:
   - {fileID: 463046585}
   - {fileID: 1658973298}
